@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="components/dashboard/style.css">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/1cd7067188.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--  -->
+<!--  -->
+<div class="main-wrapper flex justify-between">
+    <aside class="sidebar">
+        <div class="sidebar__container">
+            <a href="#" class="sidebar__logo">
+                <img src="assets/img/dashboard/logo.svg" alt="Cash 4 Crypto" class="sidebar__img-logo">
+            </a>
+            <ul class="sidebar__block-first">
+                <li class="flex items-center sidebar__dashboard sidebar__item">
+                    <a href="#">
+                        <i class="fas fa-house-user"></i>
+                        Dashboard
+                    </a>
+                    <span class="sidebar__item-active block"></span>
+                </li>
+                <li class="flex items-center sidebar__activity sidebar__item">
+                    <a href="#">
+                        <i class="far fa-user"></i>
+                        Activity
+                    </a>
+                    <span class="sidebar__item-active hidden"></span>
+                </li>
+                <li class="flex items-center sidebar__transfers sidebar__item">
+                    <a href="#">
+                        <i class="fas fa-exchange-alt"></i>
+                        Transfers
+                    </a>
+                    <span class="sidebar__item-active hidden"></span>
+                </li>
+                <li class="flex items-center sidebar__donations sidebar__item">
+                    <a href="#">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        Donations
+                    </a>
+                    <span class="sidebar__item-active hidden"></span>
+                </li>
+                <li class="flex items-center sidebar__coins sidebar__item">
+                    <a href="#">
+                        <i class="fab fa-bitcoin"></i>
+                        Coins
+                    </a>
+                    <span class="sidebar__item-active hidden"></span>
+                </li>
+            </ul>
+            <!-- ----------------- -->
+            <ul class="sidebar__block-second">
+                <p class="sidebar__api-title">API’s</p>
+                <li class="flex items-center sidebar__coinbase sidebar__api">
+                    <a href="#">Coinbase</a>
+                    <span class="sidebar__item-active hidden"></span>
+                </li>
+                <li class="flex sidebar__paypal sidebar__api">
+                    <a href="#">Paypal</a>
+                    <span class="sidebar__item-active hidden"></span>
+                </li>
+                <li class="flex items-center sidebar__nexo sidebar__api">
+                    <a href="#">Nexo</a>
+                    <span class="sidebar__item-active hidden"></span>
+                </li>
+            </ul>
+            <!-- ----------------- -->
+            <ul class="sidebar__block-third">
+                <p class="sidebar__comms-title">Comms</p>
+                <li class="flex justify-between items-center sidebar__chat sidebar__comm">
+                    <a href="#">
+                        <i class="far fa-comment-alt"></i>
+                        Chat
+                    </a>
+                    <span class="sidebar__item-amount block amount text-center">2</span>
+                </li>
+                <li class="flex justify-between items-center sidebar__email sidebar__comm">
+                    <a href="#">
+                        <i class="far fa-envelope"></i>
+                        Email
+                    </a>
+                    <span class="sidebar__item-amount block amount text-center">4</span>
+                </li>
+            </ul>
+            <!-- ----------------- -->
+            <ul class="sidebar__block-fourth">
+                <li class="flex items-center sidebar__settings sidebar__item">
+                    <a href="#">
+                        <i class="fas fa-cog"></i>
+                        Settings
+                    </a>
+                    <span class="sidebar__item-active hidden"></span>
+                </li>
+            </ul>
+        </div>
+    </aside>
+    <!-- ----------------- -->
+    <!-- ----------------- -->
+    <section class="board">
+        <div class="header__wrap flex items-center">
+            <nav class="header__nav flex items-center justify-end">
+                <div class="header__icon-search">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input class="hidden" type="search" name="" id="header__search">
+                <div class="header__notifications relative">
+                    <i class="far fa-bell"></i>
+                    <span class="notification__amount absolute text-center">3</span>
+                </div>
+                <button class="header__logout main-btn">Log Out</button>
+            </nav>
+        </div>
+        <div class="board__wrapp">
+            <h2 class="board__title">Dashboard</h2>
+            <div class="board__wrapper flex justify-start">
+                <div class="board__transfer board-small bg-white">
+                    <div class="board__wrap">
+                        <div class="transfer__wrap flex flex-col justify-center relative ">
+                            <div class="field__burger burger absolute">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="transfer__bg bg flex justify-center items-center">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <p class="transfer__title text-center">Total Transfers</p>
+                            <p class="transfer__amount text-center">
+                                <span>1.2</span>
+                            k
+                            </p>
+                        </div>
+                        <div class="profit__wrap flex flex-col justify-center relative ">
+                            <p class="profit__title text-center">Total profit</p>
+                            <p class="profit__amount text-center">
+                                <span class="amount__icon">$</span>
+                                <span class="amount__value uppercase">39,034</span>
+<!--                                 <span class="amount__currency">usd</span> -->
+                            </p>
+                            <button class="profit__btn main-btn text-center">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="board__donation board-small bg-white">
+                    <div class="board__wrap">
+                        <div class="transfer__wrap flex flex-col justify-center relative">
+                            <div class="transfer__burger burger absolute">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </div>
+                            <div class="donation__bg bg flex justify-center items-center">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <p class="transfer__title text-center">Total Transfers</p>
+                            <p class="transfer__amount text-center">
+                                <span>1.2</span>
+                            k
+                            </p>
+                        </div>
+                        <div class="profit__wrap flex flex-col justify-center">
+                            <p class="profit__title text-center">Total profit</p>
+                            <p class="profit__amount text-center">
+                                <span class="amount__icon">$</span>
+                                <span class="amount__value uppercase">39,034</span>
+<!--                                 <span class="amount__currency">usd</span> -->
+                            </p>
+                            <button class="profit__btn main-btn text-center">View</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------------------ -->
+                <div class="board__traffic relative board-medium bg-white">
+                    <div class="traffic__burger burger absolute">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <h4 class="daily__title board-medium__title">Daily Traffic</h4>
+                    <div class="daily__wrap board-medium__wrap flex justify-between">
+                        <div class="daily__circle board-medium__circle flex flex-col justify-center">
+                            <p class="circle__title board-medium__circle-title text-center">
+                                increase
+                            </p>
+                            <p class="circle__text board-medium__circle-text text-center">
+                                <span>1.2</span>
+                                %
+                            </p>
+                        </div>
+                        <div class="daily__data flex flex-col justify-start">
+                            <p class="data__user data__text relative text-center">User</p>
+                            <p class="data__visitor data__text relative text-center">Visitor</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ----------------------- -->
+                <div class="board__productivity board-medium relative bg-white">
+                    <div class="productivity__burger burger absolute">
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                    <h4 class="daily__title board-medium__title">Productivity</h4>
+                    <div class="daily__wrap board-medium__wrap flex justify-between">
+                        <div class="daily__circle board-medium__circle flex flex-col justify-center">
+                            <p class="circle__title board-medium__circle-title text-center">
+                                productivity
+                            </p>
+                            <p class="circle__text board-medium__circle-text text-center">
+                                <span>16</span>
+                                %
+                            </p>
+                        </div>
+                        <div class="productivity__data flex flex-col justify-start">
+                            <p class="data__safe data__text relative text-left">Safe</p>
+                            <p class="data__low-risk data__text relative text-left">Low Risk</p>
+                            <p class="data__risk data__text relative text-left">Risk</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- --------------------- -->
+        <!-- *********************** -->
+        <div class="activity">
+            <div class="activity__wrap flex justify-between">
+                <div class="activity__activ">
+                    <div class="activ__wrap">
+                        <div class="activ__title-wrap flex justify-between items-end">
+                            <h3 class="activ__title">Activity</h3>
+                            <div class="activ__view relative">
+                                <button class="activ__btn main-btn">View All</button>
+                                <div class="activ__burger burger absolute">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="activ__news flex flex-col justify-center">
+                            <div class="news__template">
+                                <div class="template__wrap  flex justify-between items-center">
+                                    <div class="news__wrap-img flex justify-center items-center">
+                                        <img class="news__img" src="assets/img/dashboard/ledger.png">
+                                    </div>
+                                    <div class="news__info">
+                                        <p class="news__title">0x4Bcb32a2726B07160efdawdawdawdadw</p>
+                                        <p class="news__text">Tranfer - Paypal</p>
+                                    </div>
+                                    <p class="news__currency-one">0.145 ETH</p>
+                                    <p class="news__currency-two relative">$98.35</p>
+                                    <p class="news__time-ago">
+                                        <span class="news__minutes">3</span>
+                                        minutes ago
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- ------------------------- -->
+                            <div class="news__template">
+                                <div class="template__wrap  flex justify-between items-center">
+                                    <div class="news__wrap-img flex justify-center items-center">
+                                        <img class="news__img" src="assets/img/dashboard/ledger.png">
+                                    </div>
+                                    <div class="news__info">
+                                        <p class="news__title">0x4Bcb32a2726B07160efdawdawdawdadw</p>
+                                        <p class="news__text">Tranfer - Paypal</p>
+                                    </div>
+                                    <p class="news__currency-one">0.145 ETH</p>
+                                    <p class="news__currency-two relative">$98.35</p>
+                                    <p class="news__time-ago">
+                                        <span class="news__minutes">3</span>
+                                        minutes ago
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- ------------------------- -->
+                            <div class="news__template">
+                                <div class="template__wrap  flex justify-between items-center">
+                                    <div class="news__wrap-img flex justify-center items-center">
+                                        <img class="news__img" src="assets/img/dashboard/ledger.png">
+                                    </div>
+                                    <div class="news__info">
+                                        <p class="news__title">0x4Bcb32a2726B07160efdawdawdawdadw</p>
+                                        <p class="news__text">Tranfer - Paypal</p>
+                                    </div>
+                                    <p class="news__currency-one">0.145 ETH</p>
+                                    <p class="news__currency-two relative">$98.35</p>
+                                    <p class="news__time-ago">
+                                        <span class="news__minutes">3</span>
+                                        minutes ago
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- ------------------------- -->
+                            <div class="news__template">
+                                <div class="template__wrap  flex justify-between items-center">
+                                    <div class="news__wrap-img flex justify-center items-center">
+                                        <img class="news__img" src="assets/img/dashboard/ledger.png">
+                                    </div>
+                                    <div class="news__info">
+                                        <p class="news__title">0x4Bcb32a2726B07160efdawdawdawdadw</p>
+                                        <p class="news__text">Tranfer - Paypal</p>
+                                    </div>
+                                    <p class="news__currency-one">0.145 ETH</p>
+                                    <p class="news__currency-two relative">$98.35</p>
+                                    <p class="news__time-ago">
+                                        <span class="news__minutes">3</span>
+                                        minutes ago
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- ------------------------- -->
+                            <div class="news__template">
+                                <div class="template__wrap  flex justify-between items-center">
+                                    <div class="news__wrap-img flex justify-center items-center">
+                                        <img class="news__img" src="assets/img/dashboard/ledger.png">
+                                    </div>
+                                    <div class="news__info">
+                                        <p class="news__title">0x4Bcb32a2726B07160efdawdawdawdadw</p>
+                                        <p class="news__text">Tranfer - Paypal</p>
+                                    </div>
+                                    <p class="news__currency-one">0.145 ETH</p>
+                                    <p class="news__currency-two relative">$98.35</p>
+                                    <p class="news__time-ago">
+                                        <span class="news__minutes">3</span>
+                                        minutes ago
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- ------------------------- -->
+                        </div>
+                    </div>
+                </div>
+                <!-- -------------- -->
+                <!-- -------------- -->
+                <div class="activity__updates updates tablet\:w-1">
+                    <div class="updates__wrap">
+                        <div class="updates__title-wrap flex justify-between">
+                            <h3 class="updates__title">Latest Updates</h3>
+                            <div class="updates__checkbox">
+                                <select name="" id="updates__date">
+                                    <option value="1">2020</option>
+                                    <option value="2">2019</option>
+                                    <option value="3">2018</option>
+                                    <option value="4">2017</option>
+                                    <option value="5">2016</option>
+                                    <option value="6">2015</option>
+                                    <option value="7">2014</option>
+                                    <option value="8">2013</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- -------- -->
+                        <div class="updates__post flex justify-start items-center">
+                            <div class="updates__img-wrap flex items-center justify-start">
+                                <img src="assets/img/dashboard/svg-one.svg" alt="" class="updates__img">
+                            </div>
+                            <div class="updates__text-wrap flex flex-col items-start">
+                                <p class="updates__post-title">Total Products</p>
+                                <p class="updates__text"> 1.2k New Products</p>
+                            </div>
+                            <div class="updates__weight flex items-center justify-end">
+                                <p class="updates__amount">10.6</p>
+                                <span class="updates__units uppercase">k</span>
+                            </div>
+                        </div>
+                        <!-- ------------------- -->
+                        <div class="updates__post flex justify-start items-center">
+                            <div class="updates__img-wrap flex items-center justify-start">
+                                <img src="assets/img/dashboard/svg-two.svg" alt="" class="updates__img">
+                            </div>
+                            <div class="updates__text-wrap flex flex-col items-start">
+                                <p class="updates__post-title">Total Products</p>
+                                <p class="updates__text"> 1.2k New Products</p>
+                            </div>
+                            <div class="updates__weight flex items-center justify-end">
+                                <p class="updates__amount">10.6</p>
+                                <span class="updates__units uppercase">k</span>
+                            </div>
+                        </div>
+                        <!-- ------------------- -->
+                        <div class="updates__post flex justify-start items-center">
+                            <div class="updates__img-wrap flex items-center justify-start">
+                                <img src="assets/img/dashboard/svg-three.svg" alt="" class="updates__img">
+                            </div>
+                            <div class="updates__text-wrap flex flex-col items-start">
+                                <p class="updates__post-title">Total Products</p>
+                                <p class="updates__text"> 1.2k New Products</p>
+                            </div>
+                            <div class="updates__weight flex items-center justify-end">
+                                <p class="updates__amount">10.6</p>
+                                <span class="updates__units uppercase">k</span>
+                            </div>
+                        </div>
+                        <!-- ------------------- -->
+                        <div class="updates__post flex justify-start items-center">
+                            <div class="updates__img-wrap flex items-center justify-start">
+                                <img src="assets/img/dashboard/svg-four.svg" alt="" class="updates__img">
+                            </div>
+                            <div class="updates__text-wrap flex flex-col items-start">
+                                <p class="updates__post-title">Total Products</p>
+                                <p class="updates__text"> 1.2k New Products</p>
+                            </div>
+                            <div class="updates__weight flex items-center justify-end">
+                                <p class="updates__amount">10.6</p>
+                                <span class="updates__units uppercase">k</span>
+                            </div>
+                        </div>
+                        <!-- ------------------- -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- **************************** -->
+        <!-- **************************** -->
+        <div class="coin">
+            <div class="coin__container">
+                <div class="coin__text-wrap flex justify-between">
+                    <h3 class="coin__title">Coin Activity</h3>
+                    <div class="coin__btn-wrap flex justify-between items-center relative">
+                        <button class="coin__burger main-btn">View All</button>
+                        <div class="burger">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- --------------- -->
+                <div class="coin__wrap-post flex justify-between">
+                    <div class="coin__wrap flex justify-center">
+                        <div class="coin-text-wrap flex flex-col justify-end">
+                            <p class="coin__total">Total Coins</p>
+                            <p class="coin__total-usd">Total USD</p>
+                        </div>
+                        <div class="coin__template flex flex-col items-center">
+                            <div class="coin__img-wrap">
+                                <img src="assets/img/dashboard/btc.svg" alt="bitcoin" class="coin__img">
+                            </div>
+                            <div class="coin__wrap-text">
+                                <p class="coin__currency">Bitcoin</p>
+                                <p class="coin__currency-short text-center">(BTC)</p>
+                            </div>
+                            <p class="coin__currency-coins">2.4</p>
+                            <p class="coin__currency-usd"><span>$</span>18000</p>
+                        </div>
+                    </div>
+                    <!-- ------------- -->
+                    <div class="coin__wrap flex justify-center">
+                        <div class="coin__template flex flex-col items-center">
+                            <div class="coin__img-wrap">
+                                <img src="assets/img/dashboard/etherium.svg" alt="bitcoin" class="coin__img">
+                            </div>
+                            <div class="coin__wrap-text">
+                                <p class="coin__currency">Bitcoin</p>
+                                <p class="coin__currency-short text-center">(BTC)</p>
+                            </div>
+                            <p class="coin__currency-coins">2.4</p>
+                            <p class="coin__currency-usd"><span>$</span>18000</p>
+                        </div>
+                    </div>
+                    <!-- ------------- -->
+                    <div class="coin__wrap flex justify-center">
+                        <div class="coin__template flex flex-col items-center">
+                            <div class="coin__img-wrap">
+                                <img src="assets/img/dashboard/tether.svg" alt="bitcoin" class="coin__img">
+                            </div>
+                            <div class="coin__wrap-text">
+                                <p class="coin__currency">Bitcoin</p>
+                                <p class="coin__currency-short text-center">(BTC)</p>
+                            </div>
+                            <p class="coin__currency-coins">2.4</p>
+                            <p class="coin__currency-usd"><span>$</span>18000</p>
+                        </div>
+                    </div>
+                    <!-- ------------- -->
+                    <div class="coin__wrap flex justify-center">
+                        <div class="coin__template flex flex-col items-center">
+                            <div class="coin__img-wrap">
+                                <img src="assets/img/dashboard/trueusd.svg" alt="bitcoin" class="coin__img">
+                            </div>
+                            <div class="coin__wrap-text">
+                                <p class="coin__currency">Bitcoin</p>
+                                <p class="coin__currency-short text-center">(BTC)</p>
+                            </div>
+                            <p class="coin__currency-coins">2.4</p>
+                            <p class="coin__currency-usd"><span>$</span>18000</p>
+                        </div>
+                    </div>
+                    <!-- ------------- -->
+                    <div class="coin__wrap flex justify-center">
+                        <div class="coin__template flex flex-col items-center">
+                            <div class="coin__img-wrap">
+                                <img src="assets/img/dashboard/maker.svg" alt="bitcoin" class="coin__img">
+                            </div>
+                            <div class="coin__wrap-text">
+                                <p class="coin__currency">Bitcoin</p>
+                                <p class="coin__currency-short text-center">(BTC)</p>
+                            </div>
+                            <p class="coin__currency-coins">2.4</p>
+                            <p class="coin__currency-usd"><span>$</span>18000</p>
+                        </div>
+                    </div>
+                    <!-- ------------- -->
+                    <div class="coin__wrap flex justify-center">
+                        <div class="coin__template flex flex-col items-center">
+                            <div class="coin__img-wrap">
+                                <img src="assets/img/dashboard/paxos.svg" alt="bitcoin" class="coin__img">
+                            </div>
+                            <div class="coin__wrap-text">
+                                <p class="coin__currency">Bitcoin</p>
+                                <p class="coin__currency-short text-center">(BTC)</p>
+                            </div>
+                            <p class="coin__currency-coins">2.4</p>
+                            <p class="coin__currency-usd"><span>$</span>18000</p>
+                        </div>
+                    </div>
+                    <!-- ------------- -->
+                    <div class="coin__wrap flex justify-center">
+                        <div class="coin__template flex flex-col items-center">
+                            <div class="coin__img-wrap">
+                                <img src="assets/img/dashboard/gemini.svg" alt="bitcoin" class="coin__img">
+                            </div>
+                            <div class="coin__wrap-text">
+                                <p class="coin__currency">Bitcoin</p>
+                                <p class="coin__currency-short text-center">(BTC)</p>
+                            </div>
+                            <p class="coin__currency-coins">2.4</p>
+                            <p class="coin__currency-usd"><span>$</span>18000</p>
+                        </div>
+                    </div>
+                    <!-- ------------- -->
+                    <div class="coin__wrap flex justify-center">
+                        <div class="coin__template flex flex-col items-center">
+                            <div class="coin__img-wrap">
+                                <img src="assets/img/dashboard/usdcoin.svg" alt="bitcoin" class="coin__img">
+                            </div>
+                            <div class="coin__wrap-text">
+                                <p class="coin__currency">Bitcoin</p>
+                                <p class="coin__currency-short text-center">(BTC)</p>
+                            </div>
+                            <p class="coin__currency-coins">2.4</p>
+                            <p class="coin__currency-usd"><span>$</span>18000</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- ------------- -->
+            </div>
+        </div>
+        <!-- ------------------ -->
+        <!-- ------------------ -->
+        <div class="revenue">
+            <div class="revenue__wrap">
+                <div class="revenue__filter flex justify-between items-center">
+                    <h3 class="revenue__title">Revenue</h3>
+                    <div class="revenue__btns flex justify-center items-center">
+                        <button class="revenue__day revenue__btn w-1/4">Day</button>
+                        <button class="revenue__week revenue__btn w-1/4">Week</button>
+                        <button class="revenue__month revenue__btn w-1/4 revenue__btn-active">Month</button>
+                        <button class="revenue__year revenue__btn w-1/4">Year</button>
+                    </div>
+                </div>
+                <!-- ----------- -->
+                <p class="revenue__text">Explanation text to go here</p>
+                <div class="revenue__visual-wrap flex justify-between flex-wrap">
+                    <div class="visual__currency flex flex-col items-start">
+                        <p class="currency__four currency__item">$8000</p>
+                        <p class="currency__three currency__item">$6000</p>
+                        <p class="currency__two currency__item">$4000</p>
+                        <p class="currency__one currency__item">$2000</p>
+                    </div>
+                    <div class="visual__graphic"></div>
+                    <div class="visual__month flex justify-between items-center">
+                        <p class="month__one month text-center">January</p>
+                        <p class="month__second month text-center">Feburary</p>
+                        <p class="month__third month text-center">March</p>
+                        <p class="month__fourth month text-center">April</p>
+                        <p class="month__fifth month text-center">May</p>
+                        <p class="month__sixth month text-center">June</p>
+                        <p class="month__seventh month text-center">July</p>
+                        <p class="month__eights month text-center">August</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- *************************** -->
+    <!-- *************************** -->
+    <!-- ************************* -->
+    <!-- ************************* -->
+    <section class=""></section>
+</div>
+</body>
+</html>
