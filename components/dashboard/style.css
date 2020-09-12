@@ -235,6 +235,7 @@ i, p, a {
 .sidebar {
     border-right: 1px solid #c7cfd6;
     width: 20.6rem;
+        background-color: #fff;
 }
 
 .sidebar i {
